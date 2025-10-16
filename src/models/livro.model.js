@@ -1,10 +1,13 @@
 class Livro {
-    constructor({ id = null, titulo, autor, categoria, ano }) {
+    constructor({ id = null, titulo, autor, categoria, ano, editora, numeroPaginas}) {
         this.id = id !== undefined ? id : null;
         this.titulo = String(titulo).trim();
         this.autor = String(autor).trim();
         this.categoria = String(categoria).trim();
         this.ano = Number.isInteger(ano) ? ano : parseInt(ano, 10);
+        this.editora = String(editora).trim();
+        this.numeroPaginas = Number.isInteger(numeroPaginas) ? numeroPaginas : parseInt(numeroPaginas, 10);
+
         this._validar();
     }
 
@@ -14,6 +17,8 @@ class Livro {
         if (!this.autor || this.autor.trim().length === 0) erros.push('Autor é obrigatório');
         if (!this.categoria || this.categoria.trim().length === 0) erros.push('Categoria é obrigatória');
         if (!Number.isInteger(this.ano) || isNaN(this.ano)) erros.push('Ano deve ser um número válido');
+        if (!this.categoria || this.editora.trim().length === 0) erros.push('Editora é obrigatória');
+        if (!Number.isInteger(this.numeroPaginas) || isNaN(this.numeroPaginas)) erros.push('Número de páginas deve ser um número válido');
 
         if (erros.length > 0) {
             const error = new Error('Dados inválidos');
@@ -30,6 +35,8 @@ class Livro {
             autor: json.autor,
             categoria: json.categoria,
             ano: json.ano,
+            editora: json.editora,
+            numeroPaginas: json.numeroPaginas,
         });
     }
 
@@ -40,6 +47,8 @@ class Livro {
         autor: this.autor,
         categoria: this.categoria,
         ano: this.ano,
+        editora: this.editora,
+        numeroPaginas: this.numeroPaginas,
         };
     }
 }

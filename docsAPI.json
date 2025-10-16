@@ -1,172 +1,172 @@
 {
-	"info": {
-		"_postman_id": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d",
-		"name": "API de Livraria (TesteNodeServer)",
-		"description": "Coleção de endpoints para a API de gerenciamento de livros, baseada no projeto TesteNodeServer.",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
-	},
-	"item": [
-		{
-			"name": "Status da API",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{baseUrl}}/api/",
-					"host": [
-						"{{baseUrl}}"
-					],
-					"path": [
-						"api",
-						""
-					]
-				},
-				"description": "Verifica a mensagem de boas-vindas da API para confirmar que ela está online."
-			},
-			"response": []
-		},
-		{
-			"name": "Livros",
-			"item": [
-				{
-					"name": "Listar todos os livros",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{baseUrl}}/api/livros/",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"api",
-								"livros",
-								""
-							]
-						},
-						"description": "Retorna uma lista com todos os livros cadastrados."
-					},
-					"response": []
-				},
-				{
-					"name": "Buscar livro por ID",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{baseUrl}}/api/livros/1",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"api",
-								"livros",
-								"1"
-							]
-						},
-						"description": "Busca e retorna um livro específico pelo seu ID."
-					},
-					"response": []
-				},
-				{
-					"name": "Criar novo livro",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"titulo\": \"O Hobbit\",\n    \"autor\": \"J.R.R. Tolkien\",\n    \"categoria\": \"Fantasia\",\n    \"ano\": 1937\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{baseUrl}}/api/livros/",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"api",
-								"livros",
-								""
-							]
-						},
-						"description": "Adiciona um novo livro à coleção."
-					},
-					"response": []
-				},
-				{
-					"name": "Atualizar livro por ID",
-					"request": {
-						"method": "PUT",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"titulo\": \"Clean Code (Edição Revisada)\",\n    \"autor\": \"Robert C. Martin\",\n    \"categoria\": \"Desenvolvimento de Software\",\n    \"ano\": 2009\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{baseUrl}}/api/livros/1",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"api",
-								"livros",
-								"1"
-							]
-						},
-						"description": "Atualiza os dados de um livro existente a partir do seu ID."
-					},
-					"response": []
-				},
-				{
-					"name": "Remover livro por ID",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"url": {
-							"raw": "{{baseUrl}}/api/livros/2",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"api",
-								"livros",
-								"2"
-							]
-						},
-						"description": "Remove um livro da coleção a partir do seu ID. (Use um ID de um livro que você criou para testar)."
-					},
-					"response": []
-				}
-			],
-			"description": "Endpoints para o gerenciamento de livros (CRUD)."
-		}
-	],
-	"variable": [
-		{
-			"key": "baseUrl",
-			"value": "http://localhost:3000",
-			"type": "string"
-		}
-	]
+    "info": {
+        "_postman_id": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d",
+        "name": "API de Livraria (TesteNodeServer)",
+        "description": "Coleção de endpoints para a API de gerenciamento de livros, baseada no projeto TesteNodeServer.",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Status da API",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{baseUrl}}/api/",
+                    "host": [
+                        "{{baseUrl}}"
+                    ],
+                    "path": [
+                        "api",
+                        ""
+                    ]
+                },
+                "description": "Verifica a mensagem de boas-vindas da API para confirmar que ela está online."
+            },
+            "response": []
+        },
+        {
+            "name": "Livros",
+            "item": [
+                {
+                    "name": "Listar todos os livros",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/api/livros/",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "api",
+                                "livros",
+                                ""
+                            ]
+                        },
+                        "description": "Retorna uma lista com todos os livros cadastrados."
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Buscar livro por ID",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/api/livros/1",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "api",
+                                "livros",
+                                "1"
+                            ]
+                        },
+                        "description": "Busca e retorna um livro específico pelo seu ID."
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Criar novo livro",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"titulo\": \"O Hobbit\",\n    \"autor\": \"J.R.R. Tolkien\",\n    \"categoria\": \"Fantasia\",\n    \"ano\": 1937,\n    \"editora\": \"Allen & Unwin\",\n    \"numeroPaginas\": 310\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/api/livros/",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "api",
+                                "livros",
+                                ""
+                            ]
+                        },
+                        "description": "Adiciona um novo livro à coleção."
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Atualizar livro por ID",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"titulo\": \"Clean Code (Edição Revisada)\",\n    \"autor\": \"Robert C. Martin\",\n    \"categoria\": \"Desenvolvimento de Software\",\n    \"ano\": 2009,\n    \"editora\": \"Alta Books\",\n    \"numeroPaginas\": 464\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/api/livros/1",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "api",
+                                "livros",
+                                "1"
+                            ]
+                        },
+                        "description": "Atualiza os dados de um livro existente a partir do seu ID."
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Remover livro por ID",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/api/livros/2",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "api",
+                                "livros",
+                                "2"
+                            ]
+                        },
+                        "description": "Remove um livro da coleção a partir do seu ID. (Use um ID de um livro que você criou para testar)."
+                    },
+                    "response": []
+                }
+            ],
+            "description": "Endpoints para o gerenciamento de livros (CRUD)."
+        }
+    ],
+    "variable": [
+        {
+            "key": "baseUrl",
+            "value": "http://localhost:3000",
+            "type": "string"
+        }
+    ]
 }
