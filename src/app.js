@@ -1,4 +1,6 @@
 const app = require("./config/express");
+const db = require("./database/sqlite");
+db.init();
 
 // Todas as rotas da aplicação
 const routes = require("./routes");
